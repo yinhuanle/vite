@@ -3,13 +3,8 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: [
-    'plugin:vue/vue3-essential',
-    'standard-with-typescript',
-    './.eslintrc-auto-import.json'
-  ],
-  overrides: [
-  ],
+  extends: ['plugin:vue/vue3-essential', 'standard-with-typescript', './.eslintrc-auto-import.json', 'prettier'],
+  overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
@@ -19,9 +14,8 @@ module.exports = {
       tsx: true
     }
   },
-  plugins: [
-    'vue'
-  ],
+  plugins: ['vue', 'prettier'],
   rules: {
+    'prettier/prettier': 'error'
   }
 }

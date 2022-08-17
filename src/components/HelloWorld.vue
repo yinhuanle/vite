@@ -1,8 +1,19 @@
 <script setup lang="ts">
-
-defineProps<{ msg: string }>()
-const count = ref(0)
-
+defineProps({
+  msg: {
+    type: String,
+    default: ''
+  }
+})
+const count = ref<number>(0)
+type Obj = {
+  o: number
+}
+const obj: Obj = {
+  o: 2
+}
+count.value++
+console.log(obj, 1, count.value)
 </script>
 
 <template>
@@ -12,15 +23,15 @@ const count = ref(0)
     <button type="button" @click="count++">count is {{ count }}</button>
     <p>
       Edit
-      <code>components/HelloWorld.vue</code> to test HMR
+      <code>components/HelloWorld.vue</code>
+      to test HMR
     </p>
   </div>
 
   <p>
     Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
+    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank">create-vue</a>
+    , the official Vue + Vite starter
   </p>
   <p>
     Install
@@ -28,6 +39,8 @@ const count = ref(0)
     in your IDE for a better DX
   </p>
   <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+  https://vuejs.org/guide/quick-start.html#local
+  https://vuejs.org/guide/quick-start.html#localhttps://vuejs.org/guide/quick-start.html#localhttps://vuejs.org/guide/quick-start.html#local
 </template>
 
 <style scoped>
