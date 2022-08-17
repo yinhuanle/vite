@@ -1,10 +1,5 @@
 <script setup lang="ts">
-defineProps({
-  msg: {
-    type: String,
-    default: ''
-  }
-})
+defineProps<{msg: string}>()
 const count = ref<number>(0)
 type Obj = {
   o: number
@@ -12,6 +7,7 @@ type Obj = {
 const obj: Obj = {
   o: 2
 }
+
 count.value++
 console.log(obj, 1, count.value)
 </script>
