@@ -1,7 +1,7 @@
 {
-  "name": "vite",
+  "name": "quec-rtk-web",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite --mode dev --host",
     "build:dev": "vue-tsc --noEmit && vite build --mode dev",
@@ -39,6 +39,6 @@
     "vue-tsc": "^0.39.5"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": "eslint --fix"
+    "*.{js,jsx,ts,tsx}": "eslint --fix"
   }
 }

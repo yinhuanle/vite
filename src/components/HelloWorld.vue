@@ -1,15 +1,21 @@
 <script setup lang="ts">
-defineProps<{msg: string}>()
+defineProps({
+  msg: {
+    type: String,
+    default: ''
+  }
+})
+
 const count = ref<number>(0)
 type Obj = {
   o: number
 }
+
 const obj: Obj = {
   o: 2
 }
-
 count.value++
-console.log(obj, 1, count.value)
+console.log(obj, count.value)
 </script>
 
 <template>
